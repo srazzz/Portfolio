@@ -1,0 +1,102 @@
+{
+    "projects": [
+      {
+        "title": "Scalable Serverless Notification Pipeline",
+        "description": "Built a serverless notification system that supports both real-time and scheduled notifications for a large user base. It handles audience targeting, batching, token management, and mobile delivery — all without overloading the system.",
+        "stack": ["AWS Lambda", "SQS", "EventBridge", "Firebase FCM", "Serverless Architecture"],
+        "highlight": "Processes large-volume notifications with batching, scheduling, and multi-channel support",
+        "details": {
+          "overview": "I built a serverless notification system that supports both real-time and scheduled notifications for a large user base. It handles audience targeting, batching, token management, and mobile delivery — all without overloading the system. The pipeline uses AWS Lambda, SQS, and EventBridge to process high-volume notification traffic efficiently, and Firebase FCM for mobile delivery.",
+          "whatIBuilt": [
+            "Event-driven notification triggers for posts, actions, reminders, etc.",
+            "Controller logic that validates requests, resolves audiences, and schedules jobs",
+            "Batch-based processing using queues to prevent load spikes",
+            "Subscriber preparation (user lookups, FCM token mapping, delivery eligibility)",
+            "Push delivery service using Firebase multicast + failure tracking",
+            "Support for both immediate and scheduled notifications",
+            "Structured tracking for success/error analytics"
+          ],
+          "simpleTerms": "Events come in → system finds the right users → batches them → queues them → sends notifications reliably and at scale."
+        }
+      },
+      {
+        "title": "Secure Single Sign-On (SSO) System + NPM SDK",
+        "description": "Designed and implemented a secure authentication workflow enabling external applications to authenticate users through a central identity provider. The system supports multiple login methods and provides encrypted token exchange for secure data transfer.",
+        "stack": ["Node.js", "Encryption", "JWT", "NPM", "REST APIs", "SaaS Platform"],
+        "highlight": "Published NPM package enabling external apps to authenticate users through Vaave SSO",
+        "details": {
+          "overview": "Designed and implemented a secure authentication workflow enabling external applications to authenticate users through a central identity provider. The system supports multiple login methods and provides encrypted token exchange for secure data transfer.",
+          "npmPackage": {
+            "name": "vaave-sso-sdk",
+            "url": "https://www.npmjs.com/package/vaave-sso-sdk",
+            "description": "Published vaave-sso-sdk, an NPM package that simplifies SSO integration for partner applications."
+          },
+          "features": [
+            "Reusable NPM SDK for integrating external apps with the SSO platform",
+            "Secure encrypted token exchange",
+            "Configurable scopes and data permissions",
+            "Lightweight integration setup for partners",
+            "Validation layer to ensure only authorized applications can authenticate users"
+          ],
+          "impact": [
+            "Reduced partner integration time",
+            "Unified authentication flow across multiple apps",
+            "Simplified onboarding of third-party systems"
+          ]
+        }
+      },
+      {
+        "title": "Feature Flag & Coupon System",
+        "description": "Built a dynamic feature-flag system and production-grade coupon engine to support controlled feature rollouts and safe experimentation, especially for payment-critical flows. Enables instant feature toggles without app releases or risky OTA deployments.",
+        "stack": ["React Native", "Node.js", "MySQL", "REST APIs", "Rule Engine"],
+        "highlight": "Dynamic rollout system + rule-based coupon engine with safe payment flow handling",
+        "details": {
+          "overview": "Designed and implemented a dual-system solution: a lightweight feature-flag framework for instant production toggles and a comprehensive coupon engine with rule-based validation and payment-safe hold mechanisms. Built to support safe experimentation and prevent payment-related issues during high-traffic scenarios.",
+          "sections": [
+            {
+              "title": "Feature Flag System (Safe Rollouts)",
+              "description": "A lightweight feature-flag framework designed for payment-critical features requiring instant shutdown capability without app releases or OTA updates.",
+              "features": [
+                "Single backend call retrieves all feature flags",
+                "Flags cached on login for fast access",
+                "Feature checks load from cache - zero performance impact",
+                "Instant enable/disable through server-side config",
+                "No app release or OTA update required"
+              ],
+              "impact": [
+                "Enabled safer deployment of sensitive features",
+                "Reduced outage risk during new rollouts",
+                "Allowed instant feature toggles in production"
+              ]
+            },
+            {
+              "title": "Coupon System (Rule Engine + Safe Payment Handling)",
+              "description": "A full-featured coupon engine with rule-based validation and a hold mechanism to prevent race conditions during checkout.",
+              "features": [
+                "Unlimited coupons (always valid)",
+                "Limited coupons with usage count tracking",
+                "Min cart value conditions",
+                "Product-level rules (restrict to specific product types)",
+                "Remaining coupon availability tracking",
+                "Per-user redemption logic",
+                "Hold mechanism: 4-minute reservation window prevents race conditions",
+                "Reduces double-redemption errors and payment failures"
+              ],
+              "impact": [
+                "Significantly reduced failed redemptions during peak usage",
+                "Improved payment success rate and user experience",
+                "Reduced customer support tickets related to coupon failures",
+                "Real-time usage tracking with safety guarantees"
+              ]
+            }
+          ],
+          "impact": [
+            "Safer deployment of payment-critical features",
+            "Reduced payment-related errors and customer support load",
+            "Enabled instant production control without deployments"
+          ]
+        }
+      }
+    ]
+  }
+  

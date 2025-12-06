@@ -1,0 +1,92 @@
+.contact {
+  background: var(--bg-primary);
+  text-align: center;
+  border-top: 1px solid rgba(0, 173, 181, 0.2);
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-message {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.8;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.social-button {
+  background: var(--bg-secondary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 200px;
+  justify-content: center;
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 173, 181, 0.3);
+}
+
+.social-button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: rgba(0, 173, 181, 0.1);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.social-label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .social-buttons {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .social-button {
+    flex: 1;
+    min-width: 120px;
+    max-width: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .social-label {
+    font-size: 0.9rem;
+  }
+  
+  .contact-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+  
+  .social-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

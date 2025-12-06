@@ -1,0 +1,30 @@
+.about {
+  background-color: var(--bg-secondary);
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-headline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.highlight-name {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .about-headline {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
+
