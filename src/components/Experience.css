@@ -118,25 +118,74 @@
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: var(--spacing-md);
+    padding-left: var(--spacing-sm);
+    max-width: 100%;
   }
   
   .timeline-item {
     padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .timeline-content {
+    padding: var(--spacing-md);
   }
   
   .company-name {
     font-size: 1.25rem;
   }
   
+  .role-name {
+    font-size: 0.95rem;
+  }
+  
+  .location {
+    font-size: 0.85rem;
+  }
+  
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: var(--spacing-xs);
   }
   
   .period {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+    align-self: flex-start;
+  }
+  
+  .achievement-item {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .bullet {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: var(--spacing-xs);
+  }
+  
+  .timeline-item {
+    padding-left: var(--spacing-sm);
+  }
+  
+  .timeline-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-item {
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 }
 
